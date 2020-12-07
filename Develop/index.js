@@ -66,14 +66,25 @@ const formQs = [
 ];
 
 
-// function to write README file
+/*________________________________________ THIS FUNCTION WRITES THE README FILE _________________________________________________*/
 function writeToFile(fileName, data) {
 }
 
-// function to initialize program
-function init() {
-
+/*___________________________________________ THIS FUNCTION WRITES THE FILE _____________________________________________________*/
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(path.join(process.cwd(), fileName),data);
 }
 
-// function call to initialize program
+
+/*________________________________ THIS FUNCTION LOGS THE USER INPUT AND CREATES THE README _____________________________________*/   
+function init() {
+    inquirer.prompt(formQs)
+    .then((inquirerResponses) => {
+        console.log("Creating Your ReadMe...");
+        writeToFile("ReadMe.md", createMarkdown({...inquirerResponses}));
+    })
+}
+
+
+/*_________________________________________ THIS FUNCTION INITIALIZES THE PROGRAM________________________________________________*/
 init();
