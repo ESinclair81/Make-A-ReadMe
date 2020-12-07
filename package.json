@@ -1,0 +1,22 @@
+{
+  "name": "make-a-readme",
+  "version": "1.0.0",
+  "description": "A simple Read Me generator using the command line, Node.JS, and the Inquirer package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ESinclair81/Make-A-ReadMe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ESinclair81/Make-A-ReadMe/issues"
+  },
+  "homepage": "https://github.com/ESinclair81/Make-A-ReadMe#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
